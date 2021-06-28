@@ -29,4 +29,5 @@ if (isset($_GET['remove'])) {
 
 print $rucshop->printShop();
 print "<br>";
+print "<br>";
 print "<a href=\"?emptybasket=true\">Empty basket</a>";

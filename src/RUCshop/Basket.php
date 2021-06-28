@@ -14,11 +14,15 @@ class Basket {
   }
 
   public function removeItem(Item $item) {
-    foreach ($this->content as &$element) {
+    reset($this->content);
+
+    while($element = current($this->content)) {
       if ($item->getId() === $element->getId()) {
-        unset($element);
+        $pos = key($this->content);
+        unset($this->content[$pos]);
         break;
       }
+      next($this->content);
     }
   }
   

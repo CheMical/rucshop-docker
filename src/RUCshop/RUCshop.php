@@ -19,7 +19,7 @@ class RUCshop {
     $output = '<ul>';
 
     foreach ($items as $item) {
-      $output .= "<li>{$item->getName()} ( {$item->getPrice()} ) <a href=\"?add={$item->getId()}\">Add</a></li>\n";
+      $output .= "<li>{$item->getName()} (price: {$item->getPrice()}) <a href=\"?add={$item->getId()}\">Add</a></li>\n";
     }
 
     $output .= '</ul>';
@@ -39,7 +39,7 @@ class RUCshop {
     foreach ($content as $id => $count) {
       $subtotal = $orderedItems[$id]->getPrice() * $count;
       $item = $orderedItems[$id];
-      $output .= "<li>{$item->getName()} ( {$item->getPrice()} ) <a href=\"?add={$item->getId()}\">Add</a> <a href=\"?remove={$item->getId()}\">Remove</a> Count: $count Price: $subtotal</li>\n";
+      $output .= "<li>{$item->getName()} (price: {$item->getPrice()}) <a href=\"?add={$item->getId()}\">Add</a> <a href=\"?remove={$item->getId()}\">Remove</a> count: $count sum: $subtotal</li>\n";
     }
 
     $output .= '</ul>';
@@ -52,7 +52,7 @@ class RUCshop {
     $output .= $this->printItemList($this->items);
     $output .= '<h2>Basket</h2>';
     $output .= $this->printBasket($this->basket, $this->items);
-    $output .= '<h3>Total</h3>';
+    $output .= '<b>Total: </b>';
     $output .= $this->basket->getTotal();
     return $output;
   }
