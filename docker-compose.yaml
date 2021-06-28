@@ -13,6 +13,5 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./webserver/log:/var/log/nginx
       - ./webserver/nginx.conf:/etc/nginx/conf.d/default.conf
 
