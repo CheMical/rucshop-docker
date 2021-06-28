@@ -1,0 +1,14 @@
+{
+    "name": "chemical/rucshop",
+    "description": "Simple webshop.",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "RUCshop": ""
+        }
+    }
+}
