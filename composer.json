@@ -1,5 +1,5 @@
 {
-    "name": "chemical/RUCshop",
+    "name": "chemical/rucshop",
     "description": "Simple webshop.",
     "license": "MIT",
     "minimum-stability": "dev",
@@ -8,7 +8,7 @@
     },
     "autoload": {
         "psr-0": {
-            "RUCshop": "src/"
+            "RUCshop": ""
         }
     }
 }
